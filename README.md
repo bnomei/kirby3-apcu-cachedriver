@@ -41,9 +41,9 @@ Usually each call to the same cached item, even repeated calls in the same http 
 
 ### Garbage Collection
 
-Kirby removes expired cached items only if they are requested again and then deemed to be expired or when the cache is flushed completely. This might result in long expired items taking up precious memory in the cache. 
-The default APCu implementation does not know about Kirbys expire timestamps thus when running out of memory it might even keep expired items and overwrite those not expired yet - depending on creation time but not on the expiry timestamp.
-With the garbage collection of this plugin all expired items are removed automatically on each http request keeping the cache as small as possible and thus reducing said cache overwrites to as few as possible.
+Kirby removes expired cached items only if they are requested again and then deemed to be expired or when the cache is flushed completely. This might result in long expired items taking up memory in the cache. 
+
+The default APCu implementation has no active garbage collection but only removes just enough expired cache items when running out of memory. That is a perfectly fine strategy. This plugin minimizes said behaviour by activly purging expired items. 
 
 ## Usage
 

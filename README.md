@@ -79,7 +79,7 @@ When Kirbys global debug config is set to `true` the complete plugin cache will 
 
 ### How to use ApcuGC with Lapse or Boost
 
-You need to set the cache driver for the [lapse plugin](https://github.com/bnomei/kirby3-lapse) to `apcu`.
+You need to set the cache driver for the [lapse plugin](https://github.com/bnomei/kirby3-lapse) to `apcugc`.
 
 **site/config/config.php**
 ```php

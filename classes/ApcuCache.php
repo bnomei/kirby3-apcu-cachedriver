@@ -20,7 +20,7 @@ final class ApcuCache extends FileCache
     /** @var array $index */
     private $index;
 
-    const INDEX = "apcugc-index";
+    public const INDEX = "apcugc-index";
 
     public function __construct(array $options = [])
     {
@@ -80,7 +80,7 @@ final class ApcuCache extends FileCache
 
         $key = $this->key($key);
         $value = new Value($value, $minutes);
-        $expire = $value->expires();
+        $expire = $value->expires() ?? 0;
 
         $this->index[$rawKey] = $expire;
 
@@ -109,8 +109,8 @@ final class ApcuCache extends FileCache
         $key = $this->key($key);
 
         $value = A::get($this->store, $key);
-        if ($value === null) {
-            $value = Value::fromJson(apcu_fetch($key));
+        if ($value === null && $fetch = apcu_fetch($key)) {
+            $value = Value::fromJson($fetch);
 
             if ($this->option('store') && (empty($this->option('store-ignore')) || str_contains($key, $this->option('store-ignore')) === false)) {
                 $this->store[$key] = $value;

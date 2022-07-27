@@ -67,8 +67,8 @@ apcugc()->benchmark(1000);
 ```
 
 ```shell script
-apcugc : XXX
-file   : XXX
+apcugc : 0.026898145675659 
+file   : 0.13169479370117
 ```
 
 > ATTENTION: This will create and remove a lot of cache files and apcu entries

@@ -29,10 +29,13 @@
   },
   "config": {
     "optimize-autoloader": true,
-    "sort-packages": true
+    "sort-packages": true,
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    }
   },
   "require": {
-    "php": ">=8.0.20",
+    "php": ">=7.4",
     "getkirby/composer-installer": "^1.1",
     "ext-apcu": "*"
   },
@@ -49,7 +52,7 @@
       "phpunit --configuration ./phpunit.xml"
     ],
     "dist": [
-      "composer install --no-dev --optimize-autoloader",
+      "composer install --no-dev --optimize-autoloader --ignore-platform-req=ext-apcu",
       "git rm -rf --cached .; git add .;"
     ],
     "kirby": [

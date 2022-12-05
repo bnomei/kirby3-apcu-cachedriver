@@ -12,9 +12,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     name: Tests
-    services:
-      redis:
-        image: redis
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -34,8 +31,5 @@ jobs:
         run: composer require getkirby/cms:"3.*@RC"
 
       - name: Run Tests
-        env:
-          REDIS_HOST: 127.0.0.1
-          REDIS_PORT: 6379
         run: |
           composer test

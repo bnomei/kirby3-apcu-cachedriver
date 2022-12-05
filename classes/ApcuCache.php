@@ -155,9 +155,9 @@ final class ApcuCache extends FileCache
         $this->index = [];
 
         if (empty($this->options['prefix']) === false) {
-            return apcu_delete(new APCUIterator('!^' . preg_quote($this->options['prefix']) . '!'));
+            return \apcu_delete(new \APCUIterator('!^' . preg_quote($this->options['prefix']) . '!'));
         } else {
-            return apcu_clear_cache();
+            return \apcu_clear_cache();
         }
     }
 

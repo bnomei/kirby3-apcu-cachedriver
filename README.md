@@ -1,4 +1,4 @@
-# Kirby3 Extended APCu Cache-Driver
+# Kirby Extended APCu Cache-Driver
 
 ![Release](https://flat.badgen.net/packagist/v/bnomei/kirby3-apcu-cachedriver?color=ae81ff)
 ![Downloads](https://flat.badgen.net/packagist/dt/bnomei/kirby3-apcu-cachedriver?color=272822)
@@ -7,21 +7,7 @@
 [![Maintainability](https://flat.badgen.net/codeclimate/maintainability/bnomei/kirby3-apcu-cachedriver)](https://codeclimate.com/github/bnomei/kirby3-apcu-cachedriver)
 [![Twitter](https://flat.badgen.net/badge/twitter/bnomei?color=66d9ef)](https://twitter.com/bnomei)
 
-Extends the basic APCu Cache-Driver for Kirby 3 with garbage collection and in-memory store
-
-## Commercial Usage
-
-> <br>
-> <b>Support open source!</b><br><br>
-> This plugin is free but if you use it in a commercial project please consider to sponsor me or make a donation.<br>
-> If my work helped you to make some cash it seems fair to me that I might get a little reward as well, right?<br><br>
-> Be kind. Share a little. Thanks.<br><br>
-> &dash; Bruno<br>
-> &nbsp;
-
-| M | O | N | E | Y |
-|---|----|---|---|---|
-| [Github sponsor](https://github.com/sponsors/bnomei) | [Patreon](https://patreon.com/bnomei) | [Buy Me a Coffee](https://buymeacoff.ee/bnomei) | [Paypal dontation](https://www.paypal.me/bnomei/15) | [Hire me](mailto:b@bnomei.com?subject=Kirby) |
+Extends the basic APCu Cache-Driver for Kirby with garbage collection and in-memory store
 
 ## Installation
 
